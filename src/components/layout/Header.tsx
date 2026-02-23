@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const Header = ({title}: HeaderProps) => {
   return (
-    <header className="bg-white w-full fixed top-0 left-(--sidebarWidth) h-(--headerHeight) max-w-[calc(100%-var(--sidebarWidth))] flex justify-between items-center px-4">
+    <header className="bg-white w-full fixed top-0 left-(--sidebarWidth) h-(--headerHeight) max-w-[calc(100%-var(--sidebarWidth))] border-b border-gray-100 flex justify-between items-center px-4">
       <h1>{title}</h1>
       <nav>
         <ul className="flex gap-4">

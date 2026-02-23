@@ -11,7 +11,7 @@ const MainLayout = ({ children, title }: MainLayoutProps) => {
     <div>
       <Sidebar />
       <Header title={title} />
-      <main>{children}</main>
+      <main className="ml-(--sidebarWidth) mt-(--headerHeight) px-4 py-5">{children}</main>
     </div>
   );
 };

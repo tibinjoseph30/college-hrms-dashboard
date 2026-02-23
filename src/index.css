@@ -19,3 +19,7 @@ body {
   font-size: var(--baseFontSize);
   background-color: var(--bodyBgColor);
 }
+
+button {
+  cursor: pointer;
+}
