@@ -3,13 +3,14 @@ import Sidebar from "./Sidebar";
 
 interface MainLayoutProps {
   children: React.ReactNode;
+  title?: string;
 }
 
-const MainLayout = ({ children }: MainLayoutProps) => {
+const MainLayout = ({ children, title }: MainLayoutProps) => {
   return (
     <div>
       <Sidebar />
-      <Header />
+      <Header title={title} />
       <main>{children}</main>
     </div>
   );

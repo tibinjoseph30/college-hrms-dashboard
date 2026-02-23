@@ -1,8 +1,8 @@
-import MainLayout from "../../components/layout/MainLayout"
+import MainLayout from "../components/layout/MainLayout"
 
 const DashboardPage = ()=> {
     return(
-        <MainLayout>
+        <MainLayout title="Dashboard">
             1
         </MainLayout>
     )
