@@ -20,44 +20,44 @@ employee data and view staff statistics.
 # Folder Structure
 
 src/
-|
-|___ components/
-|    |__ dashboard/
-|    |   |__ employee-table
-|    |   |   |__ EmployeeFilter.tsx
-|    |   |   |__ EmployeeGrid.tsx
-|    |   |   |__ EmployeePagination.tsx
-|    |   |   |__ EmployeeRow.tsx
-|    |   |
-|    |   |__ stats/
-|    |   |   |__ Stats.tsx
-|    |   |   |__ StatsCard.tsx
-|    |   |
-|    |__ layout/
-|    |   |__ Header.tsx
-|    |   |__ Sidebar.tsx
-|    |   |__ MainLayout.tsx
-|    |   |
-|    |__ Ui/
-|    |   |__ Card.tsx
-|    |   |__ IconButton.tsx
-|    |   |__ Input.tsx
-|    |
-|___ data/
-|    |__ employees.ts
-|    |__ stats.ts
-|    |
-|___ pages/
-|    |__ DashboardPage.tsx
-|    |
-|___ types/
-|    |__ types.ts
-|    |
-|___ App.tsx
-|___ index.css
-|___ main.tsx
+│
+├── components/
+│   ├── dashboard/
+│   │   ├── employee-table/
+│   │   │   ├── EmployeeFilter.tsx
+│   │   │   ├── EmployeeGrid.tsx
+│   │   │   ├── EmployeePagination.tsx
+│   │   │   └── EmployeeRow.tsx
+│   │   │
+│   │   ├── stats/
+│   │   │   ├── Stats.tsx
+│   │   │   └── StatsCard.tsx
+│   │
+│   ├── layout/
+│   │   ├── Header.tsx
+│   │   ├── Sidebar.tsx
+│   │   └── MainLayout.tsx
+│   │
+│   ├── ui/
+│   │   ├── Card.tsx
+│   │   ├── IconButton.tsx
+│   │   └── Input.tsx
+│
+├── data/
+│   ├── employees.ts
+│   └── stats.ts
+│
+├── pages/
+│   └── DashboardPage.tsx
+│
+├── types/
+│   └── types.ts
+│
+├── App.tsx
+├── index.css
+└── main.tsx
 
-1. Components/
+**1. Components/**
 This folder contains all reusable components, organized based on their 
 corresponding pages or functionality.
 
