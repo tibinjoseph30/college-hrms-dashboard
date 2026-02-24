@@ -105,12 +105,12 @@ Wraps the entire application structure (Sidebar + Header + Main Content)
 **2. dashboard/**<br/>
 This folder contains components specific to the Dashboard page. devided into 2 sub folders.
 
-- employee-table
+**employee-table**<br/>
 Displays employee records in a tabular format
 * Pagination
 * Basic search
 
-- stats
+**stats**<br/>
 Contains 3 reusable statistic cards:
 * Total employees
 * Present today
@@ -144,6 +144,26 @@ This folder contains shared and reusable UI components.
 4. App will run on:
 
 - http://localhost:5173
+
+-------------------------------------------------------------
+
+# Screenshots
+
+### Desktop View
+![Desktop View](./screenshots/desktop.png)
+
+### Mobile View
+![Mobile View](./screenshots/mobile.png)
+![Mobile View](./screenshots/mobile-menu.png)
+
+### Tablet View
+![Tablet View](./screenshots/tablet.png)
+
+--------------------------------------------------------------
+
+# Live Demo
+
+- https://college-hrms.netlify.app/
 
 -------------------------------------------------------------
 
