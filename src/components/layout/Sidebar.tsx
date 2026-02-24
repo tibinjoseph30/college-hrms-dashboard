@@ -31,7 +31,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         />
       )}
       <aside
-        className={`${isOpen ? "translate-x-0" : "max-xl:-translate-x-full"} bg-white fixed transition duration-200 z-50 left-0 top-0 w-(--sidebarWidth) min-h-full`}
+        className={`${isOpen ? "translate-x-0" : "max-xl:-translate-x-full"} bg-white fixed max-xl:transition max-xl:duration-200 z-50 left-0 top-0 w-(--sidebarWidth) min-h-full`}
       >
         <div className="h-(--headerHeight) px-4 border-b border-gray-100 flex items-center text-2xl font-semibold">
           <Link to="">HRMS</Link>
