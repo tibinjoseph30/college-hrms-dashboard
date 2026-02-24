@@ -19,7 +19,7 @@ const Input = ({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className={`border-2 border-gray-200 rounded-md px-4 py-2 ${className}`}
+      className={`border-2 border-gray-200 rounded-md px-4 py-2 focus:outline-2 outline-blue-600 ${className}`}
     />
   );
 };

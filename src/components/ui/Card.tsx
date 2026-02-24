@@ -5,6 +5,7 @@ interface CardProps {
   bodyClassName?: string;
   size?: "lg" | "xl";
   titleSize?: "md" | "lg";
+  className?: string;
 }
 
 const Card = ({
@@ -14,6 +15,7 @@ const Card = ({
   bodyClassName = "",
   size = "lg",
   titleSize = "md",
+  className=""
 }: CardProps) => {
   const sizeStyles = {
     lg: "px-6 py-4",
@@ -26,7 +28,7 @@ const Card = ({
   };
 
   return (
-    <article className="bg-white rounded-2xl">
+    <article className={`bg-white rounded-2xl ${className}`}>
       {title && (
         <header className={`${sizeStyles[size]} ${headerClassName}`}>
           <h4 className={`font-semibold ${titleStyles[titleSize]}`}>{title}</h4>

@@ -1,5 +1,5 @@
-import EmployeeGrid from "../components/dashboard/EmployeeGrid";
-import Stats from "../components/dashboard/Stats";
+import EmployeeGrid from "../components/dashboard/employee-table/EmployeeGrid";
+import Stats from "../components/dashboard/stats/Stats";
 import MainLayout from "../components/layout/MainLayout";
 
 const DashboardPage = () => {

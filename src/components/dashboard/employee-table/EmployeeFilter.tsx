@@ -1,4 +1,4 @@
-import Input from "../ui/Input";
+import Input from "../../ui/Input";
 
 interface EmployeeFilterprops {
     value: string;
@@ -11,7 +11,7 @@ const EmployeeFilter = ({value, onChange}: EmployeeFilterprops) => {
       placeholder="Search by name or department"
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className="w-72"
+      className="sm:w-72 w-full"
     />
   );
 };

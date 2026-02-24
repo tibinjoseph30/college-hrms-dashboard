@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { employeesData } from "../../data/employees";
-import Card from "../ui/Card";
+import { useMemo, useState } from "react";
+import { employeesData } from "../../../data/employees";
+import Card from "../../ui/Card";
 import EmployeeFilter from "./EmployeeFilter";
 import EmployeeRow from "./EmployeeRow";
 import EmployeePagination from "./EmployeePagination";
@@ -14,20 +14,22 @@ const employeeHeadCols = [
 ];
 
 const EmployeeGrid = () => {
-  const [SearchEmployee, setSearchEmployee] = useState("");
+  const [searchEmployee, setSearchEmployee] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
   const rowsPerPage = 4;
 
-  const filteredEmployees = employeesData.filter(
-    (emp) =>
-      emp.empName
-        .toLocaleLowerCase()
-        .includes(SearchEmployee.toLocaleLowerCase()) ||
-      emp.department
-        .toLocaleLowerCase()
-        .includes(SearchEmployee.toLocaleLowerCase()),
-  );
+  const filteredEmployees = useMemo(() => {
+    return employeesData.filter(
+      (emp) =>
+        emp.empName
+          .toLocaleLowerCase()
+          .includes(searchEmployee.toLocaleLowerCase()) ||
+        emp.department
+          .toLocaleLowerCase()
+          .includes(searchEmployee.toLocaleLowerCase()),
+    );
+  }, [searchEmployee]);
 
   const totalPages = Math.ceil(filteredEmployees.length / rowsPerPage);
   const firstIndex = (currentPage - 1) * rowsPerPage;
@@ -37,10 +39,15 @@ const EmployeeGrid = () => {
   );
 
   return (
-    <Card title="Employee Details" titleSize="lg" headerClassName="border-b border-gray-100">
+    <Card
+      title="Employee Details"
+      titleSize="lg"
+      headerClassName="border-b border-gray-100"
+      className="overflow-hidden"
+    >
       <div className="mb-4 flex">
         <EmployeeFilter
-          value={SearchEmployee}
+          value={searchEmployee}
           onChange={(value: string) => {
             setSearchEmployee(value);
             setCurrentPage(1);
@@ -54,7 +61,7 @@ const EmployeeGrid = () => {
               {employeeHeadCols.map((col) => (
                 <th
                   key={col.key}
-                  className="px-6 py-2 font-semibold first:rounded-tl-md first:rounded-bl-md last:rounded-tr-md last:rounded-br-md text-left uppercase text-sm text-gray-500"
+                  className="px-6 py-2 font-semibold whitespace-nowrap first:rounded-tl-md first:rounded-bl-md last:rounded-tr-md last:rounded-br-md text-left uppercase text-sm text-gray-500"
                 >
                   {col.label}
                 </th>

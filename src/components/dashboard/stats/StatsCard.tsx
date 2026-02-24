@@ -1,6 +1,6 @@
 import { UserCheck, Users, UserX } from "lucide-react";
-import type { statsTypes } from "../../types/types";
-import Card from "../ui/Card";
+import type { statsTypes } from "../../../types/types";
+import Card from "../../ui/Card";
 
 const iconsMap = {
   Users: Users,
@@ -14,7 +14,7 @@ const StatsCard = ({ title, value, icon, styles }: statsTypes) => {
   return (
     <Card size="xl">
       <div className="flex gap-4 items-center">
-        <div className={`w-18 h-18 rounded-full flex items-center justify-center ${styles}`}>
+        <div className={`w-18 h-18 min-w-18 min-h-18 rounded-full flex items-center justify-center ${styles}`}>
           <Icon size={32} />
         </div>
         <div>
