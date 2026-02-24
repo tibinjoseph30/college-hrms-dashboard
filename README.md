@@ -19,6 +19,9 @@ employee data and view staff statistics.
 
 # Folder Structure
 
+## 📁 Project Structure
+
+```
 src/
 │
 ├── components/
@@ -56,29 +59,30 @@ src/
 ├── App.tsx
 ├── index.css
 └── main.tsx
+```
 
-**1. Components/**
+**1. Components/**<br/>
 This folder contains all reusable components, organized based on their 
 corresponding pages or functionality.
 
-2. data/
+**2. data/**<br/>
 This folder contains static JSON data
 
-3. pages/
+**3. pages/**<br/>
 This folder contains the main page-level components that combine multiple 
 related components to form complete views.
 
-4. types/
+**4. types/**<br/>
 This folder contains all TypeScript type definitions and interfaces used 
 throughout the application.
 
-5. App.tsx
+**5. App.tsx**<br/>
 Root component of the application. Defines main layout structure.
 
-6. main.tsx
+**6. main.tsx**<br/>
 Mounts React app to the DOM.
 
-7. index.css
+**7. index.css**<br/>
 contains global styles applied across the application. It integrates Tailwind CSS 
 and includes the Google Font Inter for consistent typography.
 
@@ -86,7 +90,7 @@ and includes the Google Font Inter for consistent typography.
 
 # Component Architecture
 
-1. layout/
+**1. layout/**<br/>
 It contains structural components responsible for the overall page structure.
 
 - Sidebar
@@ -98,7 +102,7 @@ Displays page title, notification icon, and profile icon
 - Mainlayout
 Wraps the entire application structure (Sidebar + Header + Main Content)
 
-2. dashboard/
+**2. dashboard/**<br/>
 This folder contains components specific to the Dashboard page. devided into 2 sub folders.
 
 - employee-table
@@ -112,7 +116,7 @@ Contains 3 reusable statistic cards:
 * Present today
 * On leave
 
-3. Ui/
+**3. Ui/**<br/>
 This folder contains shared and reusable UI components.
 * Card
 * Icon button
@@ -145,7 +149,7 @@ This folder contains shared and reusable UI components.
 
 # Author
 
-Tibin Joseph
+Tibin Joseph<br/>
 Frontent Developer
 
 
